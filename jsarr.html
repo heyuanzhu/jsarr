@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    数组：
+       
+        遍历：
+        let num = 0
+        var arr = [1,2,3]
+       
+        for() //for 
+
+        for (var index in arr){    // for in
+            arr[index]
+        }
+
+        arr.forEach((item,index,arr)=>{
+            num += item
+        })  //没有返回值
+
+        arr.map((item,index,arr)=>{
+            return item + 1;
+        }) //返回一个运算过的 新数组 原数组不变
+
+        arr.filter((item.index,arr)=>{
+            return item > 2
+        })  返回条件的布尔值   
+        
+
+        arr.every((item,index,arr)=>{
+            return item > 2  
+        })  当所有结果满足时候 返回 ture  否则返回false
+
+        arr.some((item,index,arr)=>{
+            reutrn item> 2 当有一个条件满足时 就返回ture
+        })
+
+        arr.reduce((x,y)=>{
+            return x + y;
+        }) //  简化数据的计算操作  
+            // 没有参数时  从数组的第一项开始填充，
+             （1,2） 返回3  在此循环  
+               （3,3） 6  遍历结束  对数组每一项进行操作 并返回单个值
+           //有参数时  参数x就是传递的参数
+
+        arr.reduceRight() // 与reduce 逻辑相同 传递的参数顺序取反
+
+
+        indexOf() //返回数组中制定值得索引  从0开始 如果不存在返回-1 可用户检查元素是否在数组中存在
+        arr.indexOf(2) //1
+        arr.indexOf(5) //-1   
+
+        lastIndexOf() // 同indexOf() 方向从后往前  
+
+
+        方法：        
+        
+        join()  数组转化成字符串  //不改变原数组
+        trString() 数组转化成字符串 //不改变原数组
+
+        reverse() 颠倒数组  //改变原数组
+
+
+        sort()  数组排序
+                //默认按字母顺序排列  传入指定回调 返回的新数组，根据回调参数的顺序排列
+                //正序（从小到大）： 返回 前面大于后面  retun a - b;
+                //倒序（从大到小）： 返回 后面大于前面  return b -b;
+
+         
+        concat() 链接数组，  返回连接后的新数组   便改变链接的原数组     
+
+        slice() 数组截取  不改变被截取的原数组
+                //当有一个正参数时  截取参数位置开始 到数据结尾的 所有项 返回截取后的新数组 索引从0开始
+                //当有连个正参数是  第一个表示开始截取的位置，第二个表示截取的数目。索引从0开始
+                //当是负的参数是 从后向前开始截取， 原理同正。
+
+        splice()  //插入和删除数组的通用方法  所以 改变原数组  （对数组本身进行删除或添加操作）
+                //参数的规则同 slice()方法
+
+
+
+
+        push() 向后添加数组项    改变原来数组的长度。 返回数组的长度
+        unshift()向前添加数组项  改变原来数组的长度。 返回数组的长度
+        
+        pop()  删除数组最后一项。 返回它删除的值   
+        shift()  向前删除组项  返回它删除的值      
+        
+        
+        其它:
+        数组的判断
+
+        isArray()   Array.isArray(arr) //返回布尔值
+        instanceof arr instanceof Array //返回ture
+        typeof arr  // "Object" 不能对数组的类型进行判断
+
+
+</body>
+</html>
